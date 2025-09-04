@@ -1,5 +1,7 @@
 # iPhone use
 
+[![npm shield](https://img.shields.io/npm/v/@iphone-use/mcp)](https://www.npmjs.com/package/@iphone-use/mcp)
+
 Make iPhone accessible to AI agents.
 
 ## Prerequisites
