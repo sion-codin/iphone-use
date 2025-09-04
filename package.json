@@ -1,6 +1,6 @@
 {
   "name": "@iphone-use/mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "iPhone Tools for MCP",
   "type": "module",
   "license": "MIT",
@@ -25,11 +25,11 @@
     "@modelcontextprotocol/sdk": "^1.17.4",
     "appium-xcuitest-driver": "10.0.4",
     "sharp": "^0.34.3",
-    "zod": "^3.25.76"
+    "zod": "^3.25.76",
+    "patch-package": "^8.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
-    "patch-package": "^8.0.0",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   }
