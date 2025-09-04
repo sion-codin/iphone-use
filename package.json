@@ -1,0 +1,33 @@
+{
+  "name": "@iphone-use/mcp",
+  "version": "0.1.0",
+  "description": "iPhone Tools for MCP",
+  "type": "module",
+  "bin": {
+    "iphone-use": "build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sion-codin/iPhone-use.git"
+  },
+  "author": {
+    "name": "Sion"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=dev tsx src/index.ts",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "appium-xcuitest-driver": "10.0.4",
+    "sharp": "^0.34.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
