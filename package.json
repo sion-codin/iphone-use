@@ -14,6 +14,7 @@
     "name": "Sion"
   },
   "scripts": {
+    "postinstall": "patch-package",
     "dev": "NODE_ENV=dev tsx src/index.ts",
     "build": "tsc",
     "watch": "tsc --watch",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "patch-package": "^8.0.0",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   }
