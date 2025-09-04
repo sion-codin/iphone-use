@@ -46,7 +46,7 @@ You should now see "Automation Running" on your iPhone screen
 ```
 
 ## Credits
-We would like to thank the following projects:
+We would like to thank the following projects:  
 [xcuitest-driver Source Code](https://github.com/appium/appium-xcuitest-driver/)  
 [xcuitest-driver Document](https://appium.github.io/appium-xcuitest-driver/latest/)
 
