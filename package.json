@@ -1,6 +1,6 @@
 {
   "name": "@iphone-use/mcp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "iPhone Tools for MCP",
   "type": "module",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sion-codin/iPhone-use.git"
+    "url": "git+https://github.com/sion-codin/iphone-use.git"
   },
   "author": {
     "name": "Sion"

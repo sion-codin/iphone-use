@@ -1,0 +1,56 @@
+name: Release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v5
+
+      - name: Set env
+        run: |
+          VERSION="${GITHUB_REF##refs/*/}"
+          # Remove 'v' prefix if it exists
+          VERSION="${VERSION#v}"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+
+      - name: Set package version
+        run: |
+          echo $(jq --arg v "${{ env.VERSION }}" '(.version) = $v' package.json) > package.json
+
+      - name: Update version in source file
+        run: |
+          sed -i "s/version: \"[0-9]*\.[0-9]*\.[0-9]*\"/version: \"${{ env.VERSION }}\"/" src/index.ts
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Set NPM_TOKEN
+        run: npm config set //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}
+
+      - name: Publish
+        if: "!github.event.release.prerelease"
+        run: |
+          npm pkg delete scripts.prepare
+          npm publish --access public
+
+      - name: Publish release candidate
+        if: "github.event.release.prerelease"
+        run: |
+          npm pkg delete scripts.prepare
+          npm publish --access public --tag=canary
