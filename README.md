@@ -9,7 +9,7 @@ Make iPhone accessible to AI agents.
 
 ## Prerequisites
 Xcode (15+)  
-Apple developer account  
+Apple ID  
 iPhone (iOS 17+)  
 
 ## QuickStart
@@ -23,7 +23,8 @@ iPhone (iOS 17+)
 2. Select the WebDriverAgentRunner scheme
 3. Select the scheme as Product -> Scheme -> WebDriverAgentRunner (or WebDriverAgentRunner_tvOS for tvOS)
 4. Select your device in Product -> Destination
-5. Select Product -> Test to build and install the WDA app
+5. (Optional) If your account is a regular (non-paid) developer account, you may need to refer to this document: [Basic Manual Configuration](https://appium.github.io/appium-xcuitest-driver/latest/preparation/prov-profile-basic-manual/)
+6. Select Product -> Test to build and install the WDA app
 
 You should now see "Automation Running" on your iPhone screen
 
