@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.4",
-    "appium-xcuitest-driver": "10.0.4",
+    "appium-xcuitest-driver": "10.0.6",
     "sharp": "^0.34.3",
     "zod": "^3.25.76",
     "patch-package": "^8.0.0"
